@@ -6,7 +6,7 @@ namespace ElementaryTasks
 {
     class IfElse
     {
-        public void FindMax()
+        /*public void FindMax()
         {
             Console.WriteLine("Enter the first value");
             int maxValue;
@@ -36,11 +36,31 @@ namespace ElementaryTasks
 
             Console.WriteLine($"Value {maxValue} is the biggest");
         }
-
-        /*public void EvenNmbers()
+        */
+        public void EvenNmbers()
         {
+            Console.WriteLine("Enter the first value");
+            int.TryParse(Console.ReadLine(), out int userInput1);
 
-        }*/
+            Console.WriteLine("Enter the second value");
+            int.TryParse(Console.ReadLine(), out int userInput2);
+
+            if ((userInput1 % 2) == 0)
+            {
+                Console.WriteLine($"Result: {userInput1 * userInput2}");
+            }
+            else
+            {
+                Console.WriteLine($"Result: {userInput1 + userInput2}");
+            }
+
+
+
+
+
+
+
+        }
 
     }
 }
