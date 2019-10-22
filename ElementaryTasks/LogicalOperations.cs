@@ -4,31 +4,28 @@ using System.Text;
 
 namespace ElementaryTasks
 {
-    class IfElse
+    class LogicalOperations
     {
-        /*public void FindMax()
+        public void FindMax()
         {
             Console.WriteLine("Enter the first value");
-            int maxValue;
-            if (int.TryParse(Console.ReadLine(), out maxValue))
+            if (int.TryParse(Console.ReadLine(), out int maxValue))
             {
-            Console.WriteLine("Enter the second value");
+                Console.WriteLine("Enter the second value");
             }
 
-            int userInput2;
-            if (int.TryParse(Console.ReadLine(), out userInput2))
+            if (int.TryParse(Console.ReadLine(), out int userInput2))
             {
                 Console.WriteLine("Enter the trird value");
             }
 
-            int userInput3;
-            if (int.TryParse(Console.ReadLine(), out userInput3))
+            if (int.TryParse(Console.ReadLine(), out int userInput3))
 
 
-            if (userInput2 > maxValue)
-            {
+                if (userInput2 > maxValue)
+                {
                     maxValue = userInput2;
-            }
+                }
             if (userInput3 > maxValue)
             {
                 maxValue = userInput3;
@@ -36,7 +33,7 @@ namespace ElementaryTasks
 
             Console.WriteLine($"Value {maxValue} is the biggest");
         }
-        */
+        
         public void EvenNmbers()
         {
             Console.WriteLine("Enter the first value");
