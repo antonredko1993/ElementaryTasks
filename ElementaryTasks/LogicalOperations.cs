@@ -6,7 +6,7 @@ namespace ElementaryTasks
 {
     class LogicalOperations
     {
-        public void FindMax()
+        public void FindMax()                    //1)	Найти наибольшее значение из двух переменных, трех, четырех, описать общий принцип для большего числа 
         {
             Console.WriteLine("Enter the first value");
             if (int.TryParse(Console.ReadLine(), out int maxValue))
@@ -33,8 +33,8 @@ namespace ElementaryTasks
 
             Console.WriteLine($"Value {maxValue} is the biggest");
         }
-        
-        public void EvenNmbers()
+
+        public void EvenNmbers()                    //2)	Если а – четное посчитать  а* б, иначе а+б
         {
             Console.WriteLine("Enter the first value");
             int.TryParse(Console.ReadLine(), out int userInput1);
@@ -50,13 +50,39 @@ namespace ElementaryTasks
             {
                 Console.WriteLine($"Result: {userInput1 + userInput2}");
             }
+        } 
+        public void PointCoordinates()              //3)	Определить какой четверти принадлежит точка с координатами (х,у)
+        {
+            Console.WriteLine("Enter the x value");
+            if (!int.TryParse(Console.ReadLine(), out int x))
+            {
+                Console.WriteLine("Error! You should enter numerical value");
+                return;
+            }
 
+            Console.WriteLine("Enter the y value");
+            if (!int.TryParse(Console.ReadLine(), out int y))
+            {
+                Console.WriteLine("Error! You should enter numerical value");
+                return;
+            }
 
-
-
-
-
-
+            if (x > 0 && y > 0)
+            {
+                Console.WriteLine($"Coordinates of the point ({x},{y}) are in I plane");
+            }
+            else if (x > 0 && y < 0)
+            {
+                Console.WriteLine($"Coordinates of the point ({x},{y}) are in IV plane");
+            }
+            else if (x < 0 && y > 0)
+            {
+                Console.WriteLine($"Coordinates of the point ({x},{y}) are in II plane");
+            }
+            else
+            {
+                Console.WriteLine($"Coordinates of the point ({x},{y}) are in III plane");
+            }
         }
 
     }

@@ -9,13 +9,15 @@ namespace ElementaryTasks
             var logicalOperations = new LogicalOperations();
 
             // 1. FindMax (1)	(Найти наибольшее значение из двух переменных, трех, четырех, описать общий принцип для большего числа)
-            //ifElse.FindMax();
+            //logicalOperations.FindMax();
 
             // 2.EvenNumbers (2)	(Если а – четное посчитать  а*б, иначе а+б)
-            logicalOperations.EvenNmbers();
+            //logicalOperations.EvenNmbers();
+
+            // 3.PointCoordinates(3) 	Определить какой четверти принадлежит точка с координатами (х,у))
+            logicalOperations.PointCoordinates();
 
 
-            
         }
     }
 }
