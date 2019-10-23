@@ -20,15 +20,16 @@ namespace ElementaryTasks
             }
 
             if (int.TryParse(Console.ReadLine(), out int userInput3))
-
-
+            {
                 if (userInput2 > maxValue)
                 {
                     maxValue = userInput2;
                 }
-            if (userInput3 > maxValue)
-            {
-                maxValue = userInput3;
+
+                if (userInput3 > maxValue)
+                {
+                    maxValue = userInput3;
+                }
             }
 
             Console.WriteLine($"Value {maxValue} is the biggest");
@@ -50,7 +51,7 @@ namespace ElementaryTasks
             {
                 Console.WriteLine($"Result: {userInput1 + userInput2}");
             }
-        } 
+        }
         public void PointCoordinates()              //3)	Определить какой четверти принадлежит точка с координатами (х,у)
         {
             Console.WriteLine("Enter the x value");
@@ -83,6 +84,48 @@ namespace ElementaryTasks
             {
                 Console.WriteLine($"Coordinates of the point ({x},{y}) are in III plane");
             }
+        }
+
+        public void SumOfPositiveNumbers()
+        {
+            Console.WriteLine("Enter the first value");
+            if (!int.TryParse(Console.ReadLine(), out int userInput1))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int userInput2))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int userInput3))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            int positiveValue1 = 0;
+            if (userInput1 > 0)
+            {
+                positiveValue1 = userInput1;
+            }
+
+            int positiveValue2 = 0;
+            if (userInput2 > 0)
+            {
+                positiveValue2 = userInput2;
+            }
+
+            int positiveValue3 = 0;
+            if (userInput3 > 0)
+            {
+                positiveValue3 = userInput3;
+            }
+
+            Console.WriteLine($"Summ of positive values: {positiveValue1 + positiveValue2 + positiveValue3}");
         }
 
     }

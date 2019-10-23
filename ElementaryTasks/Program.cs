@@ -15,9 +15,10 @@ namespace ElementaryTasks
             //logicalOperations.EvenNmbers();
 
             // 3.PointCoordinates(3) 	Определить какой четверти принадлежит точка с координатами (х,у))
-            logicalOperations.PointCoordinates();
+            //logicalOperations.PointCoordinates();
 
-
+            // 4.SumOfPositiveNumbers    4)	Найти суммы только положительных из трех чисел
+            logicalOperations.SumOfPositiveNumbers();
         }
     }
 }
