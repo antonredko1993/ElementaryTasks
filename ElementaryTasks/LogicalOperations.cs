@@ -197,5 +197,109 @@ namespace ElementaryTasks
                 Console.WriteLine("The first envelope will not fit into the second");
             }
         }
+        public void AscendingSort()
+        {
+            Console.WriteLine("Chose how many values you want to sort");
+            if (!int.TryParse(Console.ReadLine(), out int choseInput))
+            {
+                Console.WriteLine("Error! You should enter numeric value from 2 to 3");
+                return;
+            }
+
+            switch (choseInput)
+
+            {
+                case 2:
+                    Console.WriteLine("Enter the first value");
+                    if (!int.TryParse(Console.ReadLine(), out int userInput11))
+                    {
+                        Console.WriteLine("Error! You should enter numeric value");
+                        return;
+                    }
+
+                    Console.WriteLine("Enter the second value");
+                    if (!int.TryParse(Console.ReadLine(), out int userInput12))
+                    {
+                        Console.WriteLine("Error! You should enter numeric value");
+                        return;
+                    }   
+                    
+                    if (userInput11 < userInput12)
+                    {
+                        Console.WriteLine($"Result: { userInput11}, {userInput12}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Result: { userInput12}, {userInput11}");
+                    }
+                    break;
+
+                case 3:
+                    Console.WriteLine("Enter the first value");
+                    if (!int.TryParse(Console.ReadLine(), out int userInput21))
+                    {
+                        Console.WriteLine("Error! You should enter numeric value");
+                        return;
+                    }
+
+                    Console.WriteLine("Enter the second value");
+                    if (!int.TryParse(Console.ReadLine(), out int userInput22))
+                    {
+                        Console.WriteLine("Error! You should enter numeric value");
+                        return;
+                    }
+
+                    Console.WriteLine("Enter the trird value");
+                    if (!int.TryParse(Console.ReadLine(), out int userInput23))
+                    {
+                        Console.WriteLine("Error! You should enter numeric value");
+                        return;
+                    }
+
+                    if (userInput21 < userInput23 & userInput22 < userInput23)
+                    {
+                        if (userInput22 > userInput21)
+                        {
+                            Console.WriteLine($"Result: { userInput21}, {userInput22}, {userInput23}");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine($"Result: { userInput22}, {userInput21}, {userInput23}");
+                        }
+                    }
+
+                    if (userInput23 < userInput21 & userInput22 < userInput21)
+                    {
+                        if (userInput23 < userInput22)
+                        {
+                            Console.WriteLine($"Result: { userInput23}, {userInput22}, {userInput21}");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine($"Result: { userInput22}, {userInput23}, {userInput21}");
+                        }
+                    }
+
+                    if (userInput23 < userInput22 & userInput21 < userInput22)
+                    {
+                        if (userInput21 > userInput23)
+                        {
+                            Console.WriteLine($"Result: { userInput23}, {userInput21}, {userInput22}");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine($"Result: { userInput21}, {userInput23}, {userInput22}");
+                        }
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Error! You've entered wrong value");
+                    break;
+            }
+        }
     }
 }

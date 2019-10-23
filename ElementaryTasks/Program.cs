@@ -24,7 +24,10 @@ namespace ElementaryTasks
             //logicalOperations.MaxExpression();
 
             // 6.EnvelopeCapasity     6)	Есть два конверта со сторонами (а,б) и (с,д) определить, можно ли один конверт вложить в другой
-            logicalOperations.EnvelopeCapacity();
+            //logicalOperations.EnvelopeCapacity();
+
+            // 7. AscendingSort  Отсортировать значения двух, трех, четырех переменных используя только условные операторы
+            logicalOperations.AscendingSort();
         }
     }
 }
