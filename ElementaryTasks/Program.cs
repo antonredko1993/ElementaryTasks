@@ -21,7 +21,10 @@ namespace ElementaryTasks
             //logicalOperations.SumOfPositiveNumbers();
 
             // 5.MaxExpression    5)    Посчитать выражение макс(а*б*с,  а+б+с)+3
-            logicalOperations.MaxExpression();
+            //logicalOperations.MaxExpression();
+
+            // 6.EnvelopeCapasity     6)	Есть два конверта со сторонами (а,б) и (с,д) определить, можно ли один конверт вложить в другой
+            logicalOperations.EnvelopeCapacity();
         }
     }
 }

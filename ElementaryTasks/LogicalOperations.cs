@@ -160,6 +160,42 @@ namespace ElementaryTasks
                 Console.WriteLine($"MaxExpression: {summResult + 3}");
             }
         }
+        public void EnvelopeCapacity()
+        {
+            Console.WriteLine("Enter the first value");
+            if (!int.TryParse(Console.ReadLine(), out int sideA))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
 
+            if (!int.TryParse(Console.ReadLine(), out int sideB))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int sideC))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int sideD))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (sideA > sideC && sideB > sideD)
+            {
+                Console.WriteLine("The first envelope will fit into the second");
+            }
+
+            else
+            {
+                Console.WriteLine("The first envelope will not fit into the second");
+            }
+        }
     }
 }
