@@ -18,7 +18,10 @@ namespace ElementaryTasks
             //logicalOperations.PointCoordinates();
 
             // 4.SumOfPositiveNumbers    4)	Найти суммы только положительных из трех чисел
-            logicalOperations.SumOfPositiveNumbers();
+            //logicalOperations.SumOfPositiveNumbers();
+
+            // 5.MaxExpression    5)    Посчитать выражение макс(а*б*с,  а+б+с)+3
+            logicalOperations.MaxExpression();
         }
     }
 }

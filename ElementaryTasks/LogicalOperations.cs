@@ -127,6 +127,39 @@ namespace ElementaryTasks
 
             Console.WriteLine($"Summ of positive values: {positiveValue1 + positiveValue2 + positiveValue3}");
         }
+        public void MaxExpression()
+        {
+            Console.WriteLine("Enter the first value");
+            if (!int.TryParse(Console.ReadLine(), out int userInput1))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int userInput2))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int userInput3))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            int multiplicationResult = userInput1 * userInput2 * userInput3;
+            int summResult = userInput1 + userInput2 + userInput3;
+
+            if (multiplicationResult > summResult)
+            {
+                Console.WriteLine($"MaxExspession: {multiplicationResult + 3}");
+            }
+            else
+            {
+                Console.WriteLine($"MaxExpression: {summResult + 3}");
+            }
+        }
 
     }
 }
