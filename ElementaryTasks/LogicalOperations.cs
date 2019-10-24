@@ -222,8 +222,8 @@ namespace ElementaryTasks
                     {
                         Console.WriteLine("Error! You should enter numeric value");
                         return;
-                    }   
-                    
+                    }
+
                     if (userInput11 < userInput12)
                     {
                         Console.WriteLine($"Result: { userInput11}, {userInput12}");
@@ -300,6 +300,56 @@ namespace ElementaryTasks
                     Console.WriteLine("Error! You've entered wrong value");
                     break;
             }
+
         }
+
+        public void StudentEvaluation()
+        {
+
+            Console.WriteLine("Enter the value");
+            if (!int.TryParse(Console.ReadLine(), out int userInput11))
+            {
+                Console.WriteLine("Error! You should enter numeric value");
+                return;
+            }
+
+            if (userInput11 >= 0 && userInput11 <= 19)
+            {
+                Console.WriteLine($"Rating: {userInput11}    Score: F");
+            }
+
+            if (userInput11 >= 20 && userInput11 <= 39)
+            {
+                Console.WriteLine($"Rating: {userInput11}    Score: E");
+            }
+
+            if (userInput11 >= 40 && userInput11 <= 59)
+            {
+                Console.WriteLine($"Rating: {userInput11}    Score: D");
+            }
+
+            if (userInput11 >= 60 && userInput11 <= 74)
+            {
+                Console.WriteLine($"Rating: {userInput11}    Score: C");
+            }
+
+            if (userInput11 >= 75 && userInput11 <= 89)
+            {
+                Console.WriteLine($"Rating: {userInput11}    Score: B");
+            }
+
+            else if (userInput11 >= 90 && userInput11 <= 100)
+            {
+                Console.WriteLine($"Rating: {userInput11}    Score: A");
+            }
+
+            else
+            {
+                Console.WriteLine($"You've entered wrong value");
+            }
+
+
+        }   
+
     }
 }

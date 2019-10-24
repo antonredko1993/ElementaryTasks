@@ -27,7 +27,18 @@ namespace ElementaryTasks
             //logicalOperations.EnvelopeCapacity();
 
             // 7. AscendingSort  Отсортировать значения двух, трех, четырех переменных используя только условные операторы
-            logicalOperations.AscendingSort();
+            //logicalOperations.AscendingSort();
+
+            //8. StudentEvaluation   рейтинг	Оценка
+            /*  0 - 19    F
+                20 - 39   E
+                40 - 59   D
+                60 - 74   C
+                75 - 89   B
+                90 - 100  A*/
+            logicalOperations.StudentEvaluation();
+
+
         }
     }
 }
