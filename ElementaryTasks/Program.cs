@@ -36,9 +36,7 @@ namespace ElementaryTasks
                 60 - 74   C
                 75 - 89   B
                 90 - 100  A*/
-            logicalOperations.StudentEvaluation();
-
-
+            //logicalOperations.StudentEvaluation();
         }
     }
 }
