@@ -37,6 +37,10 @@ namespace ElementaryTasks
                 75 - 89   B
                 90 - 100  A*/
             //logicalOperations.StudentEvaluation();
+
+            var cicles = new Cicles();
+
+            cicles.SumOfEvenValues();
         }
     }
 }
