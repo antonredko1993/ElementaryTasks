@@ -40,7 +40,11 @@ namespace ElementaryTasks
 
             var cicles = new Cicles();
 
-            cicles.SumOfEvenValues();
+            //1)	 найти сумму четных чисел и их количество в диапазоне от 1 до 99
+            //cicles.SumOfEvenValues();
+
+            //2)   	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
+            cicles.PrimeNumber();
         }
     }
 }
