@@ -38,13 +38,30 @@ namespace ElementaryTasks
                 90 - 100  A*/
             //logicalOperations.StudentEvaluation();
 
-            var cicles = new Cicles();
+            var loops = new Loops();
 
             //1)	 найти сумму четных чисел и их количество в диапазоне от 1 до 99
-            //cicles.SumOfEvenValues();
+            //loops.SumOfEvenValues();
 
             //2)   	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
-            cicles.PrimeNumber();
+            //loops.PrimeNumber();
+
+            /*3)    	Вывести на экран квадрат, со стороной а
+            *****
+            *   *
+            *   *
+            *   *
+            *****
+            */
+            //loops.Square();
+
+            /*4) 5)	Вывести шахматную доску с заданными размерами, по принципу:
+            *   *  *  *  *  *
+            *  *  *  *  *  *  
+            *  *  *  *  *  *
+            *  *  *  *  *  *
+            */
+            loops.Chess();
         }
     }
 }
