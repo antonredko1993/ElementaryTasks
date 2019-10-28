@@ -12,14 +12,12 @@ namespace ElementaryTasks
             int count = 0;
             for (int i = 1; i < 99; i++)
             {
-                if (i % 2 != 0)
+                if (i % 2 == 0)
                 {
-                    continue;
+                    sum += i;
+                    count++;
+                    Console.WriteLine($"Value: {i}");
                 }
-
-                sum += i;
-                count++;
-                Console.WriteLine($"Value: {i}");
             }
             Console.WriteLine($"Summ: {sum}");
             Console.WriteLine($"Count: {count}");
@@ -28,9 +26,9 @@ namespace ElementaryTasks
         public void PrimeNumber()
         {
             Console.WriteLine("Enter the value");
-            double.TryParse(Console.ReadLine(), out double userInput1);
+            int.TryParse(Console.ReadLine(), out int userInput1);
 
-            if (userInput1 <= 1 ^ userInput1 % 1 != 0)
+            if (userInput1 <= 1 || userInput1 % 1 != 0)
             {
                 Console.WriteLine($"{userInput1} isn't a prime number");
             }
@@ -54,7 +52,7 @@ namespace ElementaryTasks
             Console.WriteLine("Enter the value");
             int.TryParse(Console.ReadLine(), out int userInput);
 
-            if (userInput <= 1 ^ userInput % 1 != 0)
+            if (userInput <= 1 || userInput % 1 != 0)
             {
                 Console.WriteLine($"{userInput} isn't correct value");
             }
@@ -91,7 +89,7 @@ namespace ElementaryTasks
             Console.WriteLine("Enter number of rows");
             int.TryParse(Console.ReadLine(), out int userInput1);
 
-            if (userInput1 <= 1 ^ userInput1 % 1 != 0)
+            if (userInput1 <= 1 || userInput1 % 1 != 0)
             {
                 Console.WriteLine($"{userInput1} isn't correct value");
             }
@@ -102,7 +100,7 @@ namespace ElementaryTasks
 
             int.TryParse(Console.ReadLine(), out int userInput2);
 
-            if (userInput2 <= 1 ^ userInput2 % 1 != 0)
+            if (userInput2 <= 1 || userInput2 % 1 != 0)
             {
                 Console.WriteLine($"{userInput2} isn't correct value");
             }
@@ -117,18 +115,29 @@ namespace ElementaryTasks
 
                     for (int column = 1; column <= userInput2; column++)
                     {
-                            if (column % 2 != 0)
-                            {
-                                Console.Write("*");
-                            }
-                            else
-                            {
-                                Console.Write(" ");
-                            }
+                        if (column % 2 != 0)
+                        {
+                            Console.Write("*");
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+                        }
                     }
                     Console.WriteLine();
-                    }                    
                 }
             }
         }
+
+        public void Polindrom()
+        {
+
+
+
+
+
+        }
     }
+}
+
+        

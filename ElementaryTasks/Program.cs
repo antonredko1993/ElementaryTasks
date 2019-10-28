@@ -41,7 +41,7 @@ namespace ElementaryTasks
             var loops = new Loops();
 
             //1)	 найти сумму четных чисел и их количество в диапазоне от 1 до 99
-            //loops.SumOfEvenValues();
+            loops.SumOfEvenValues();
 
             //2)   	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
             //loops.PrimeNumber();
@@ -61,7 +61,7 @@ namespace ElementaryTasks
             *  *  *  *  *  *
             *  *  *  *  *  *
             */
-            loops.Chess();
+            //loops.Chess();
         }
     }
 }
