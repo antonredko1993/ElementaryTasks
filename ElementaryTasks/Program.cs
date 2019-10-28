@@ -37,6 +37,14 @@ namespace ElementaryTasks
                 75 - 89   B
                 90 - 100  A*/
             //logicalOperations.StudentEvaluation();
+
+            var cicles = new Cicles();
+
+            //1)	 найти сумму четных чисел и их количество в диапазоне от 1 до 99
+            //cicles.SumOfEvenValues();
+
+            //2)   	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
+            cicles.PrimeNumber();
         }
     }
 }
