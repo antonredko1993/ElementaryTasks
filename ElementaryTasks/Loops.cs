@@ -129,13 +129,58 @@ namespace ElementaryTasks
             }
         }
 
-        public void Polindrom()
+        public void PrintPrimeNumbers()                                      //эта параша не работает
         {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
 
+            if (userInput <= 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");           
+            }
+            else
+            {
+                for (int i = 2; i <= userInput ; i++)
+                {
+                    for (int a = 2; a <= i; a++)
+                    {
+                        if (i % a == 0)
+                        {
+                            Console.WriteLine($"{i}");
+                        }
+                    }
+                }
+            }
+        }
 
+        public void NaturalNumber()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
 
-
-
+            if (userInput <= 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");
+            }
+            else
+            {
+                for (int i = 1; i < userInput; i++)
+                {
+                    if (i*i > userInput)
+                    {
+                        Console.Write($"Squuare of number {i}({i*i}) > {userInput}");
+                    }
+                    else if (i * i < userInput)
+                    {
+                        Console.Write($"Squuare of number {i}({i*i}) < {userInput}");
+                    }
+                    else
+                    {
+                        Console.Write($"Squuare of number {i}({i * i}) = {userInput}");
+                    }
+                    Console.WriteLine();
+                }
+            }
         }
     }
 }
