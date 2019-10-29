@@ -71,7 +71,10 @@ namespace ElementaryTasks
             //loops.NaturalNumber();
 
             //7)  	Вывести все делители числа
-            loops.Divisors();
+            //loops.Divisors();
+
+            //8) 	Найти корень натурального числа с точностью до целого
+            loops.RootOfNaturalNumber();
         }
     }
 }

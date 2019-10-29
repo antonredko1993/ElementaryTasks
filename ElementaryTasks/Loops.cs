@@ -195,6 +195,21 @@ namespace ElementaryTasks
                 }
             }
         }
+
+        public void RootOfNaturalNumber()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
+
+            if (userInput < 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");
+            }
+            else
+            {
+                Console.WriteLine(Math.Sqrt(userInput));
+            }
+        }
     }
 }
 
