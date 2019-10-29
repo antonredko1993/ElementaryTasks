@@ -68,7 +68,10 @@ namespace ElementaryTasks
             //loops.PrintPrimeNumbers();
 
             //6) 	Вывести все натуральные числа,  квадрат которых больше/меньше заданного числа n
-            loops.NaturalNumber();
+            //loops.NaturalNumber();
+
+            //7)  	Вывести все делители числа
+            loops.Divisors();
         }
     }
 }

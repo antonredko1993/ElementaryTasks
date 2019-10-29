@@ -158,7 +158,7 @@ namespace ElementaryTasks
             Console.WriteLine("Enter the value");
             int.TryParse(Console.ReadLine(), out int userInput);
 
-            if (userInput <= 1)
+            if (userInput < 1)
             {
                 Console.WriteLine($"{userInput} isn't correct value");
             }
@@ -168,17 +168,30 @@ namespace ElementaryTasks
                 {
                     if (i*i > userInput)
                     {
-                        Console.Write($"Squuare of number {i}({i*i}) > {userInput}");
+                        Console.Write($"Square of number {i}({i*i}) > {userInput}");
                     }
                     else if (i * i < userInput)
                     {
-                        Console.Write($"Squuare of number {i}({i*i}) < {userInput}");
+                        Console.Write($"Square of number {i}({i*i}) < {userInput}");
                     }
                     else
                     {
-                        Console.Write($"Squuare of number {i}({i * i}) = {userInput}");
+                        Console.Write($"Square of number {i}({i * i}) = {userInput}");
                     }
                     Console.WriteLine();
+                }
+            }
+        }
+
+        public void Divisors()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
+            for (int a = 1; a <= userInput; a++)
+            {
+                if (userInput % a == 0)
+                {
+                    Console.WriteLine(a);
                 }
             }
         }
