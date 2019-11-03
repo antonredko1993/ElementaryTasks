@@ -136,20 +136,19 @@ namespace ElementaryTasks
 
             if (userInput <= 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");           
+                Console.WriteLine($"{userInput} isn't correct value");
             }
             else
             {
-                for (int i = 2; i <= userInput ; i++)
+                int sum = 0;
+                for (int i = 2; i <= userInput; i++)
                 {
-                    for (int a = 2; a <= i; a++)
+                    if (IsPrimeNumber(i))
                     {
-                        if (i % a == 0)
-                        {
-                            Console.WriteLine($"{i}");
-                        }
+                        Console.WriteLine($"{i}");
                     }
                 }
+
             }
         }
 
@@ -166,13 +165,13 @@ namespace ElementaryTasks
             {
                 for (int i = 1; i < userInput; i++)
                 {
-                    if (i*i > userInput)
+                    if (i * i > userInput)
                     {
-                        Console.Write($"Square of number {i}({i*i}) > {userInput}");
+                        Console.Write($"Square of number {i}({i * i}) > {userInput}");
                     }
                     else if (i * i < userInput)
                     {
-                        Console.Write($"Square of number {i}({i*i}) < {userInput}");
+                        Console.Write($"Square of number {i}({i * i}) < {userInput}");
                     }
                     else
                     {
@@ -209,6 +208,63 @@ namespace ElementaryTasks
             {
                 Console.WriteLine(Math.Sqrt(userInput));
             }
+        }
+
+        public void Factorial()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
+
+            if (userInput < 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");
+            }
+            else
+            {
+                int F = 1;
+                for (int i = userInput; i > 1; i--)
+                {
+                    F = F * i;
+                }
+                Console.WriteLine($"Factorial: {F}");
+            }
+        }
+
+        public void AverageValue()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
+
+            if (userInput < 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");
+            }
+            else
+            {
+                int sum = 0;
+                int number = 0;
+                for (int i = 1; i <= userInput; i++)
+                {
+                    if (i == 1 || !IsPrimeNumber(i))
+                    {
+                        sum += i;
+                        number++;
+                    }
+                }
+                double result = (double)sum / number;
+                Console.WriteLine(result);
+            }
+        }
+        static bool IsPrimeNumber(int num)                           // метод для определения простого числа
+        {
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
