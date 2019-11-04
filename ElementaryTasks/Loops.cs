@@ -266,7 +266,51 @@ namespace ElementaryTasks
             }
             return true;
         }
-    }
+
+        public void CalculateSum()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
+
+            if (userInput < 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");
+            }
+            else
+            {
+                int sum = 0;
+                while (userInput > 0)
+                {
+                    sum += userInput % 10;
+                    userInput /= 10;
+                }
+                Console.WriteLine(sum);
+            }
+        }
+
+        public void MirrorNumber()
+        {
+            Console.WriteLine("Enter the value");
+            int.TryParse(Console.ReadLine(), out int userInput);
+
+            if (userInput < 1)
+            {
+                Console.WriteLine($"{userInput} isn't correct value");
+            }
+            else
+            {
+                int result = 0;
+                while (userInput > 0)
+                {
+                    result *= 10;
+                    result += userInput % 10;
+                    userInput /= 10;
+                }
+                Console.WriteLine(result);
+            }
+        }
+    }   
+
 }
 
         
