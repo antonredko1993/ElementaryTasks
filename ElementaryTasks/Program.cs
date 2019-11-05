@@ -38,8 +38,7 @@ namespace ElementaryTasks
                 90 - 100  A*/
             //logicalOperations.StudentEvaluation();
 
-            var loops = new Loops();
-
+            Loops loops = new Loops();
             //1)	 найти сумму четных чисел и их количество в диапазоне от 1 до 99
             //loops.SumOfEvenValues();
 
@@ -71,7 +70,23 @@ namespace ElementaryTasks
             //loops.NaturalNumber();
 
             //7)  	Вывести все делители числа
-            loops.Divisors();
+            //loops.Divisors();
+
+            //8) 	Найти корень натурального числа с точностью до целого
+            //loops.RootOfNaturalNumber();
+
+            //9)    Вычислить факториал числа n. n! = 1*2*…*n-1*n;
+            //loops.Factorial();
+
+            //10)   Вычислить среднее значение чисел, не являющихся простыми, в диапазоне от 1 до n.
+            //loops.AverageValue();
+
+            //11) 	Посчитать сумму цифр заданного числа
+            //loops.CalculateSum();
+
+            //12) 	Вывести число, которое является зеркальным отображением последовательности цифр заданного числа
+            //      например, задано число 123, вывести 321.    
+            loops.MirrorNumber();
         }
     }
 }
