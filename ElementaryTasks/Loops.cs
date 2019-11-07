@@ -129,7 +129,7 @@ namespace ElementaryTasks
             }
         }
 
-        public void PrintPrimeNumbers()                                      //эта параша не работает
+        public void PrintPrimeNumbers()                                  
         {
             Console.WriteLine("Enter the value");
             int.TryParse(Console.ReadLine(), out int userInput);
@@ -255,7 +255,7 @@ namespace ElementaryTasks
                 Console.WriteLine(result);
             }
         }
-        static bool IsPrimeNumber(int num)                           // метод для определения простого числа
+        static bool IsPrimeNumber(int num)                    
         {
             for (int i = 2; i < num; i++)
             {
