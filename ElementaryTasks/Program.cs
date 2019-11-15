@@ -97,7 +97,19 @@ namespace ElementaryTasks
             //arrays.IndexOfMaxValue();
 
             //3)	Посчитать сумму элементов массива с нечетными индексами
-            arrays.SumOfElements();
+            //arrays.SumOfElements();
+
+            //4)	Найти наиболее часто встречающееся значение
+            //arrays.MostCommonValue();
+
+            //5)	Сделать реверс массива (массив в обратном направлении)
+            //arrays.ArrayReverse();
+
+            //6) 	Найти все элементы, которые меньше среднего значения
+            //arrays.LessThenAverageValue();
+
+            //7)	Найти все элементы массива, для которых делителем является хотя бы один из элементов массива.
+            arrays.Divisor();
         }
     }
 }
