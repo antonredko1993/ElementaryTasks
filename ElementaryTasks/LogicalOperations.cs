@@ -6,7 +6,7 @@ namespace ElementaryTasks
 {
     class LogicalOperations
     {
-        public void FindMax()                    //1)	Найти наибольшее значение из двух переменных, трех, четырех, описать общий принцип для большего числа 
+        public void FindMax()                    
         {
             Console.WriteLine("Enter the first value");
             if (int.TryParse(Console.ReadLine(), out int maxValue))
@@ -35,7 +35,7 @@ namespace ElementaryTasks
             Console.WriteLine($"Value {maxValue} is the biggest");
         }
 
-        public void EvenNmbers()                    //2)	Если а – четное посчитать  а* б, иначе а+б
+        public void EvenNmbers()                   
         {
             Console.WriteLine("Enter the first value");
             int.TryParse(Console.ReadLine(), out int userInput1);
@@ -52,7 +52,7 @@ namespace ElementaryTasks
                 Console.WriteLine($"Result: {userInput1 + userInput2}");
             }
         }
-        public void PointCoordinates()              //3)	Определить какой четверти принадлежит точка с координатами (х,у)
+        public void PointCoordinates()            
         {
             Console.WriteLine("Enter the x value");
             if (!int.TryParse(Console.ReadLine(), out int x))
