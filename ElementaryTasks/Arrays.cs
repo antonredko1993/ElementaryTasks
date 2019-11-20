@@ -109,9 +109,49 @@ namespace ElementaryTasks
                 }
             }
         }
-        public void Divisor()
+        public void Divide()
         {
-
+            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers.Length; j++)
+                {
+                    if (numbers[j] % numbers[i] == 0 && numbers[j] != numbers[i])
+                    {
+                        Console.WriteLine(numbers[j]);
+                    }
+                }
+            }
         }
-    }   
+
+        public void SwapPartsOfArray()
+        {
+            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4, 7 };
+            int[] mirrorNumbers = new int[numbers.Length];
+            for (int i = (numbers.Length / 2); i < numbers.Length; i++)
+            {
+                int mirrorIndex = i - (numbers.Length/2);
+                mirrorNumbers[mirrorIndex] = numbers[i];
+            }
+            for (int i = 0; i < (numbers.Length / 2); i++)
+            {
+                int mirrorIndex = i+ (numbers.Length / 2);
+                mirrorNumbers[mirrorIndex] = numbers[i];
+            }
+            for (int i = 0; i < mirrorNumbers.Length; i++)
+            {
+                Console.WriteLine(mirrorNumbers[i]);
+            }
+        }
+
+        public void ArrayFilling()
+        {
+            int[] array = new int[101];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = i;
+                Console.WriteLine(array[i]);
+            }
+        }
+    }
 }
