@@ -36,7 +36,7 @@ namespace ElementaryTasks
             Console.WriteLine(index);
         }
 
-        public void SumOfElements()
+        public void CalculateSumOfElements()
         {
             int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
             int sum = 0;
@@ -50,7 +50,7 @@ namespace ElementaryTasks
             Console.WriteLine(sum);
         }
 
-        public void MostCommonValue()
+        public void FindMostCommonValue()
         {
             int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
             int longestOccurance = 0;
@@ -74,7 +74,7 @@ namespace ElementaryTasks
                     mostCommonValue = numbers[i];
                 }
             }
-            Console.WriteLine(mostCommonValue);
+            Console.WriteLine($"The most common value in array is {mostCommonValue}");
         }
 
         public void ArrayReverse()

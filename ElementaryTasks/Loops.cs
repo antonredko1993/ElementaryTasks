@@ -140,7 +140,6 @@ namespace ElementaryTasks
             }
             else
             {
-                int sum = 0;
                 for (int i = 2; i <= userInput; i++)
                 {
                     if (IsPrimeNumber(i))

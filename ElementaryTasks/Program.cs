@@ -89,7 +89,6 @@ namespace ElementaryTasks
             //loops.MirrorNumber();
 
             Arrays arrays = new Arrays();
-
             //1)	Найти минимальный элемент массива
             //arrays.MinElement();
 
@@ -115,7 +114,38 @@ namespace ElementaryTasks
             //arrays.SwapPartsOfArray();
 
             //9)	Заполнить массив  из 100 элементов числами от 0 до 100
-            arrays.ArrayFilling();
+            //arrays.ArrayFilling();
+
+            User user1 = new User();
+            user1.FirstName = "Anton";
+            user1.LastName = "Redko";
+            user1.DateOfBirth = new DateTime(1993,10,31);
+
+            User user2 = new User();
+            user2.FirstName = "Ivan";
+            user2.LastName = "Ivanov";
+            user2.DateOfBirth = new DateTime(1992, 6, 8);
+
+            User user3 = new User();
+            user3.FirstName = "Petya";
+            user3.LastName = "Petrov";
+            user3.DateOfBirth = new DateTime(1999, 12, 21);
+
+            User user4 = new User();
+            user4.FirstName = "Dima";
+            user4.LastName = "Korsh";
+            user4.DateOfBirth = new DateTime(1989, 4, 1);
+
+            User user5 = new User();
+            user5.FirstName = "Max";
+            user5.LastName = "Maximov";
+            user5.DateOfBirth = new DateTime(2001, 11, 14);
+
+            Console.WriteLine(user1.GetUserData());
+            Console.WriteLine(user2.GetUserData());
+            Console.WriteLine(user3.GetUserData());
+            Console.WriteLine(user4.GetUserData());
+            Console.WriteLine(user5.GetUserData());
         }
     }
 }
