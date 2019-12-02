@@ -6,31 +6,27 @@ namespace ElementaryTasks
 {
     class Loops
     {
-        public void SumOfEvenValues()
-        {
-            int sum = 0;
-            int count = 0;
-            for (int i = 1; i < 99; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    sum += i;
-                    count++;
-                    Console.WriteLine($"Value: {i}");
-                }
-            }
-            Console.WriteLine($"Summ: {sum}");
-            Console.WriteLine($"Count: {count}");
-        }
+        //public void SumOfEvenValues(out int a,  int sum, out int count)
+        //{
+        //    for (int i = 1; i < 99; i++)
+        //    {
+        //        if (i % 2 == 0)
+        //        {
+        //            sum += i;
+        //            count++;
+        //            int a = i;
+        //            Console.WriteLine($"Value: {i}");
+        //        }
+        //    }
+        //    Console.WriteLine($"Summ: {sum}");
+        //    Console.WriteLine($"Count: {count}");
+        //}
 
-        public void PrimeNumber()
+        public bool PrimeNumber(int userInput1)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput1);
-
             if (userInput1 <= 1 || userInput1 % 1 != 0)
             {
-                Console.WriteLine($"{userInput1} isn't a prime number");
+                return false;
             }
             else
             {
@@ -38,12 +34,10 @@ namespace ElementaryTasks
                 {
                     if (userInput1 % i == 0)
                     {
-                        Console.WriteLine($"{userInput1} isn't a prime number");
-                        return;
+                        return false;
                     }
                 }
-
-                Console.WriteLine($"{ userInput1} is a prime number");
+                return true;
             }
         }
 

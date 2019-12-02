@@ -6,9 +6,9 @@ namespace ElementaryTasks
 {
     class User
     {
-        public string FirstName;
-        public string LastName;
-        public DateTime DateOfBirth;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         public string GetUserData()
         {
@@ -20,5 +20,5 @@ namespace ElementaryTasks
             var now = DateTime.Today;
             return now.Year - DateOfBirth.Year;
         }
-    }
+}
 }
