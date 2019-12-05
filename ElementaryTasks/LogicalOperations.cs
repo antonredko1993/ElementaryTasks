@@ -6,107 +6,61 @@ namespace ElementaryTasks
 {
     class LogicalOperations
     {
-        public void FindMax()                    
+        public int FindMaxValue(int userInput1, int userInput2, int userInput3)                    
         {
-            Console.WriteLine("Enter the first value");
-            if (int.TryParse(Console.ReadLine(), out int maxValue))
+            int maxValue = userInput1;
+            if (userInput2 > maxValue)
             {
-                Console.WriteLine("Enter the second value");
+                maxValue = userInput2;
             }
 
-            if (int.TryParse(Console.ReadLine(), out int userInput2))
+            if (userInput3 > maxValue)
             {
-                Console.WriteLine("Enter the trird value");
+                maxValue = userInput3;
             }
-
-            if (int.TryParse(Console.ReadLine(), out int userInput3))
-            {
-                if (userInput2 > maxValue)
-                {
-                    maxValue = userInput2;
-                }
-
-                if (userInput3 > maxValue)
-                {
-                    maxValue = userInput3;
-                }
-            }
-
-            Console.WriteLine($"Value {maxValue} is the biggest");
+            return maxValue;
         }
 
-        public void EvenNmbers()                   
+        public int CalculateResult(int userInput1, int userInput2)                   
         {
-            Console.WriteLine("Enter the first value");
-            int.TryParse(Console.ReadLine(), out int userInput1);
-
-            Console.WriteLine("Enter the second value");
-            int.TryParse(Console.ReadLine(), out int userInput2);
-
             if ((userInput1 % 2) == 0)
             {
-                Console.WriteLine($"Result: {userInput1 * userInput2}");
+                int result = userInput1 * userInput2;
+                return result;
             }
             else
             {
-                Console.WriteLine($"Result: {userInput1 + userInput2}");
+                int result = userInput1 + userInput2;
+                return result;
             }
         }
-        public void PointCoordinates()            
+        public string FindCoordinatesOfPoints(int x, int y)            
         {
-            Console.WriteLine("Enter the x value");
-            if (!int.TryParse(Console.ReadLine(), out int x))
-            {
-                Console.WriteLine("Error! You should enter numerical value");
-                return;
-            }
-
-            Console.WriteLine("Enter the y value");
-            if (!int.TryParse(Console.ReadLine(), out int y))
-            {
-                Console.WriteLine("Error! You should enter numerical value");
-                return;
-            }
-
+            string plane;
             if (x > 0 && y > 0)
             {
-                Console.WriteLine($"Coordinates of the point ({x},{y}) are in I plane");
+                plane = "I";
+                return plane;
             }
             else if (x > 0 && y < 0)
             {
-                Console.WriteLine($"Coordinates of the point ({x},{y}) are in IV plane");
+                plane = "IV";
+                return plane;
             }
             else if (x < 0 && y > 0)
             {
-                Console.WriteLine($"Coordinates of the point ({x},{y}) are in II plane");
+                plane = "II";
+                return plane;
             }
             else
             {
-                Console.WriteLine($"Coordinates of the point ({x},{y}) are in III plane");
+                plane = "III";
+                return plane;
             }
         }
 
-        public void SumOfPositiveNumbers()
+        public int GetSumOfPositiveNumbers(int userInput1, int userInput2, int userInput3)
         {
-            Console.WriteLine("Enter the first value");
-            if (!int.TryParse(Console.ReadLine(), out int userInput1))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int userInput2))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int userInput3))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
             int positiveValue1 = 0;
             if (userInput1 > 0)
             {
@@ -124,232 +78,138 @@ namespace ElementaryTasks
             {
                 positiveValue3 = userInput3;
             }
-
-            Console.WriteLine($"Summ of positive values: {positiveValue1 + positiveValue2 + positiveValue3}");
+            int sum = positiveValue1 + positiveValue2 + positiveValue3;
+            return sum;
         }
-        public void MaxExpression()
+        public int FindMaxExpression(int userInput1, int userInput2, int userInput3)
         {
-            Console.WriteLine("Enter the first value");
-            if (!int.TryParse(Console.ReadLine(), out int userInput1))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int userInput2))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int userInput3))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
             int multiplicationResult = userInput1 * userInput2 * userInput3;
             int summResult = userInput1 + userInput2 + userInput3;
+            int result;
 
             if (multiplicationResult > summResult)
             {
-                Console.WriteLine($"MaxExspession: {multiplicationResult + 3}");
+
+                result = multiplicationResult + 3;
+                return result;
             }
             else
             {
-                Console.WriteLine($"MaxExpression: {summResult + 3}");
+                result = summResult + 3;
+                return result;
             }
         }
-        public void EnvelopeCapacity()
+        public bool DetermineEnvelopeCapacity(int sideA, int sideB, int sideC, int sideD)
         {
-            Console.WriteLine("Enter the first value");
-            if (!int.TryParse(Console.ReadLine(), out int sideA))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int sideB))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int sideC))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
-            if (!int.TryParse(Console.ReadLine(), out int sideD))
-            {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
-            }
-
             if (sideA > sideC && sideB > sideD)
             {
-                Console.WriteLine("The first envelope will fit into the second");
+                return true;
             }
 
             else
             {
-                Console.WriteLine("The first envelope will not fit into the second");
+                return false;
             }
         }
-        public void AscendingSort()
+        public string AscendingSort(int userInput1, int userInput2, int userInput3, int choseInput)
         {
-            Console.WriteLine("Chose how many values you want to sort");
-            if (!int.TryParse(Console.ReadLine(), out int choseInput))
-            {
-                Console.WriteLine("Error! You should enter numeric value from 2 to 3");
-                return;
-            }
-
             switch (choseInput)
-
             {
                 case 2:
-                    Console.WriteLine("Enter the first value");
-                    if (!int.TryParse(Console.ReadLine(), out int userInput11))
+                    if (userInput1 < userInput2)
                     {
-                        Console.WriteLine("Error! You should enter numeric value");
-                        return;
-                    }
-
-                    Console.WriteLine("Enter the second value");
-                    if (!int.TryParse(Console.ReadLine(), out int userInput12))
-                    {
-                        Console.WriteLine("Error! You should enter numeric value");
-                        return;
-                    }
-
-                    if (userInput11 < userInput12)
-                    {
-                        Console.WriteLine($"Result: { userInput11}, {userInput12}");
+                        string result = $"Result: {userInput1}, {userInput2}";
+                        return result;
                     }
                     else
                     {
-                        Console.WriteLine($"Result: { userInput12}, {userInput11}");
+                        string result = $"Result: { userInput2}, {userInput1}";
+                        return result;
                     }
-                    break;
-
                 case 3:
-                    Console.WriteLine("Enter the first value");
-                    if (!int.TryParse(Console.ReadLine(), out int userInput21))
+                    if (userInput1 < userInput3 & userInput2 < userInput3)
                     {
-                        Console.WriteLine("Error! You should enter numeric value");
-                        return;
-                    }
-
-                    Console.WriteLine("Enter the second value");
-                    if (!int.TryParse(Console.ReadLine(), out int userInput22))
-                    {
-                        Console.WriteLine("Error! You should enter numeric value");
-                        return;
-                    }
-
-                    Console.WriteLine("Enter the trird value");
-                    if (!int.TryParse(Console.ReadLine(), out int userInput23))
-                    {
-                        Console.WriteLine("Error! You should enter numeric value");
-                        return;
-                    }
-
-                    if (userInput21 < userInput23 & userInput22 < userInput23)
-                    {
-                        if (userInput22 > userInput21)
+                        if (userInput2 > userInput1)
                         {
-                            Console.WriteLine($"Result: { userInput21}, {userInput22}, {userInput23}");
+                            string result = $"Result: { userInput1}, {userInput2}, {userInput3}";
+                            return result;
                         }
-
                         else
                         {
-                            Console.WriteLine($"Result: { userInput22}, {userInput21}, {userInput23}");
+                            string result = $"Result: { userInput2}, {userInput1}, {userInput3}";
+                            return result;
                         }
                     }
-
-                    if (userInput23 < userInput21 & userInput22 < userInput21)
+                    if (userInput3 < userInput1 & userInput2 < userInput1)
                     {
-                        if (userInput23 < userInput22)
+                        if (userInput3 < userInput2)
                         {
-                            Console.WriteLine($"Result: { userInput23}, {userInput22}, {userInput21}");
+                            string result = $"Result: { userInput3}, {userInput2}, {userInput1}";
+                            return result;
                         }
-
                         else
                         {
-                            Console.WriteLine($"Result: { userInput22}, {userInput23}, {userInput21}");
+                            string result = $"Result: { userInput2}, {userInput3}, {userInput1}";
+                            return result;
                         }
                     }
-
-                    if (userInput23 < userInput22 & userInput21 < userInput22)
+                    if (userInput3 < userInput2 & userInput1 < userInput2)
                     {
-                        if (userInput21 > userInput23)
+                        if (userInput1 > userInput3)
                         {
-                            Console.WriteLine($"Result: { userInput23}, {userInput21}, {userInput22}");
+                            string result = $"Result: { userInput3}, {userInput1}, {userInput2}";
+                            return result;
                         }
-
                         else
                         {
-                            Console.WriteLine($"Result: { userInput21}, {userInput23}, {userInput22}");
+                            string result = $"Result: { userInput1}, {userInput3}, {userInput2}";
+                            return result;
                         }
                     }
-                    break;
+                    else
+                    {
+                        string result ="Error! You've entered wrong value";
+                        return result;
+                    }
 
                 default:
-                    Console.WriteLine("Error! You've entered wrong value");
-                    break;
+                    string errorResult = "Error! You've entered wrong value";
+                    return errorResult;
             }
-
         }
 
-        public void StudentEvaluation()
+        public string StudentEvaluation(int userInput1)
         {
-
-            Console.WriteLine("Enter the value");
-            if (!int.TryParse(Console.ReadLine(), out int userInput11))
+            if (userInput1 >= 0 && userInput1 <= 19)
             {
-                Console.WriteLine("Error! You should enter numeric value");
-                return;
+                string score = "F";
+                return score;
             }
-
-            if (userInput11 >= 0 && userInput11 <= 19)
+            if (userInput1 >= 20 && userInput1 <= 39)
             {
-                Console.WriteLine($"Rating: {userInput11}    Score: F");
+                string score = "E";
+                return score;
             }
-
-            if (userInput11 >= 20 && userInput11 <= 39)
+            if (userInput1 >= 40 && userInput1 <= 59)
             {
-                Console.WriteLine($"Rating: {userInput11}    Score: E");
+                string score = "D";
+                return score;
             }
-
-            if (userInput11 >= 40 && userInput11 <= 59)
+            if (userInput1 >= 60 && userInput1 <= 74)
             {
-                Console.WriteLine($"Rating: {userInput11}    Score: D");
+                string score = "C";
+                return score;
             }
-
-            if (userInput11 >= 60 && userInput11 <= 74)
+            if (userInput1 >= 75 && userInput1 <= 89)
             {
-                Console.WriteLine($"Rating: {userInput11}    Score: C");
+                string score = "B";
+                return score;
             }
-
-            if (userInput11 >= 75 && userInput11 <= 89)
-            {
-                Console.WriteLine($"Rating: {userInput11}    Score: B");
-            }
-
-            else if (userInput11 >= 90 && userInput11 <= 100)
-            {
-                Console.WriteLine($"Rating: {userInput11}    Score: A");
-            }
-
             else
             {
-                Console.WriteLine($"You've entered wrong value");
+                string score = "A";
+                return score;
             }
-
-
         }  
-
     }
 }
