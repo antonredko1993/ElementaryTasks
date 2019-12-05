@@ -6,9 +6,8 @@ namespace ElementaryTasks
 {
     class Arrays
     {
-        public void MinElement()
+        public int FindMinElementOfArray(int[]numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
             int minValue = numbers[0];
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -17,12 +16,11 @@ namespace ElementaryTasks
                     minValue = numbers[i];
                 }
             }
-            Console.WriteLine(minValue);
+            return minValue;
         }
 
-        public void IndexOfMaxValue()
+        public int IndexOfMaxValue(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
             int maxValue = numbers[0];
             int index = 0;
             for (int i = 0; i < numbers.Length; i++)
@@ -33,12 +31,11 @@ namespace ElementaryTasks
                     index = i;
                 }
             }
-            Console.WriteLine(index);
+            return index;
         }
 
-        public void CalculateSumOfElements()
+        public int CalculateSumOfNonEvenElements(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
             int sum = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -47,12 +44,11 @@ namespace ElementaryTasks
                     sum += numbers[i];
                 }
             }
-            Console.WriteLine(sum);
+            return sum;
         }
 
-        public void FindMostCommonValue()
+        public int FindMostCommonValue(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
             int longestOccurance = 0;
             int mostCommonValue = 0;
 
@@ -74,28 +70,24 @@ namespace ElementaryTasks
                     mostCommonValue = numbers[i];
                 }
             }
-            Console.WriteLine($"The most common value in array is {mostCommonValue}");
+            return mostCommonValue;
         }
 
-        public void ArrayReverse()
+        public int[] ArrayReverse(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
             int[] reverseNumbers = new int[numbers.Length];
             for (int i = numbers.Length; i > 0; i--)
             {
                 int reverseIndex = numbers.Length - i;
                 reverseNumbers[reverseIndex] = numbers[i-1];
             }
-            foreach (int reverseIndex in reverseNumbers)
-            {
-                Console.Write($"{reverseIndex} ");
-            }
+            return reverseNumbers;
         }
 
-        public void LessThenAverageValue()
+        public int[] LessThenAverageValue(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
             int sum = 0;
+            var lessValues = new List<int>();
             for (int i = 0; i < numbers.Length; i++)
             {
                 sum += numbers[i];
@@ -105,53 +97,56 @@ namespace ElementaryTasks
             {
                 if (numbers[i] < averageValue)
                 {
-                    Console.WriteLine(numbers[i]);
+                    lessValues.Add(numbers[i]);
                 }
             }
+            return lessValues.ToArray();
         }
-        public void Divide()
+        public int[] FindElementsWhichHasDivideInArray(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            var eleventsWhichHasDivide = new List<int>();
             for (int i = 0; i < numbers.Length; i++)
             {
                 for (int j = 0; j < numbers.Length; j++)
                 {
                     if (numbers[j] % numbers[i] == 0 && numbers[j] != numbers[i])
                     {
-                        Console.WriteLine(numbers[j]);
+                        eleventsWhichHasDivide.Add(numbers[j]);
                     }
                 }
             }
+            return eleventsWhichHasDivide.ToArray();
         }
 
-        public void SwapPartsOfArray()
+        public int[] SwapPartsOfArray(int[] numbers)
         {
-            int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4, 7 };
-            int[] mirrorNumbers = new int[numbers.Length];
+            var mirrorNumbers = new List<int>();
+            int[] mirrorNumber = new int[numbers.Length];
             for (int i = (numbers.Length / 2); i < numbers.Length; i++)
             {
                 int mirrorIndex = i - (numbers.Length/2);
-                mirrorNumbers[mirrorIndex] = numbers[i];
+                mirrorNumber[mirrorIndex] = numbers[i];
             }
             for (int i = 0; i < (numbers.Length / 2); i++)
             {
                 int mirrorIndex = i+ (numbers.Length / 2);
-                mirrorNumbers[mirrorIndex] = numbers[i];
+                mirrorNumber[mirrorIndex] = numbers[i];
             }
-            for (int i = 0; i < mirrorNumbers.Length; i++)
+            for (int i = 0; i < mirrorNumber.Length; i++)
             {
-                Console.WriteLine(mirrorNumbers[i]);
+                mirrorNumbers.Add(mirrorNumber[i]);
             }
+            return mirrorNumbers.ToArray();
         }
 
-        public void ArrayFilling()
+        public int[] ArrayFilling(int[] array)
         {
-            int[] array = new int[101];
+            var arrayIndex = new List<int>();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = i;
-                Console.WriteLine(array[i]);
+                arrayIndex.Add(i);
             }
+            return arrayIndex.ToArray();
         }
     }
 }

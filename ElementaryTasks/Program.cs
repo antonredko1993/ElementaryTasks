@@ -346,31 +346,68 @@ namespace ElementaryTasks
 
             Arrays arrays = new Arrays();
             //1)	Найти минимальный элемент массива
-            //arrays.MinElement();
+            //int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
+            //var result = arrays.FindMinElementOfArray(numbers);
+            //Console.WriteLine($"Min element of array is: {result}");
 
             //2)	Найти индекс максимального элемента массива
-            //arrays.IndexOfMaxValue();
+            //int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
+            //var result = arrays.IndexOfMaxValue(numbers);
+            //Console.WriteLine($"Index of max value in array is: {result}");
 
             //3)	Посчитать сумму элементов массива с нечетными индексами
-            //arrays.SumOfElements();
+            //int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
+            //var result = arrays.CalculateSumOfNonEvenElements(numbers);
+            //Console.WriteLine($"Sum of non even elements is: {result}");
 
             //4)	Найти наиболее часто встречающееся значение
-            //arrays.MostCommonValue();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.FindMostCommonValue(numbers);
+            //Console.WriteLine($"The most common value in array is {result}");
 
             //5)	Сделать реверс массива (массив в обратном направлении)
-            //arrays.ArrayReverse();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.ArrayReverse(numbers);
+            //foreach (int reverseIndex in result)
+            //{
+            //    Console.Write($"{reverseIndex} ");
+            //}
 
             //6) 	Найти все элементы, которые меньше среднего значения
-            //arrays.LessThenAverageValue();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.LessThenAverageValue(numbers);
+            //Console.WriteLine("Values which less then average value of array:");
+            //foreach (var i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //7)	Найти все элементы массива, для которых делителем является хотя бы один из элементов массива.
-            //arrays.Divide();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.FindElementsWhichHasDivideInArray(numbers);
+            //Console.WriteLine("Elements which has at least 1 divide in array:");
+            //foreach (int i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //8)	Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
-            //arrays.SwapPartsOfArray();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.SwapPartsOfArray(numbers);
+            //Console.WriteLine("Swapped array looks like:");
+            //foreach (int i in result)
+            //{
+            //    Console.Write($"{i} ");
+            //}
 
             //9)	Заполнить массив  из 100 элементов числами от 0 до 100
-            //arrays.ArrayFilling();
+            //int[] array = new int[101];
+            //var result = arrays.ArrayFilling(array);
+            //Console.WriteLine("Filled array looks like:");
+            //foreach (int i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //User user1 = new User();
             //user1.FirstName = "Anton";
