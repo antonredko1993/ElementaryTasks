@@ -21,18 +21,18 @@ namespace ElementaryTasks
             return maxValue;
         }
 
-        public int CalculateResult(int userInput1, int userInput2)                   
+        public int GetResultOfOperationBetween2Numbers(int userInput1, int userInput2)                   
         {
+            int result;
             if ((userInput1 % 2) == 0)
             {
-                int result = userInput1 * userInput2;
-                return result;
+                result = userInput1 * userInput2;
             }
             else
             {
-                int result = userInput1 + userInput2;
-                return result;
+                result = userInput1 + userInput2;
             }
+            return result;
         }
         public string FindCoordinatesOfPoints(int x, int y)            
         {
@@ -40,23 +40,20 @@ namespace ElementaryTasks
             if (x > 0 && y > 0)
             {
                 plane = "I";
-                return plane;
             }
             else if (x > 0 && y < 0)
             {
                 plane = "IV";
-                return plane;
             }
             else if (x < 0 && y > 0)
             {
                 plane = "II";
-                return plane;
             }
             else
             {
                 plane = "III";
-                return plane;
             }
+            return plane;
         }
 
         public int GetSumOfPositiveNumbers(int userInput1, int userInput2, int userInput3)
@@ -91,13 +88,12 @@ namespace ElementaryTasks
             {
 
                 result = multiplicationResult + 3;
-                return result;
             }
             else
             {
                 result = summResult + 3;
-                return result;
             }
+            return result;
         }
         public bool DetermineEnvelopeCapacity(int sideA, int sideB, int sideC, int sideD)
         {
@@ -113,64 +109,58 @@ namespace ElementaryTasks
         }
         public string AscendingSort(int userInput1, int userInput2, int userInput3, int choseInput)
         {
+            string result;
             switch (choseInput)
             {
                 case 2:
                     if (userInput1 < userInput2)
                     {
-                        string result = $"Result: {userInput1}, {userInput2}";
-                        return result;
+                        result = $"Result: {userInput1}, {userInput2}";
                     }
                     else
                     {
-                        string result = $"Result: { userInput2}, {userInput1}";
-                        return result;
+                        result = $"Result: { userInput2}, {userInput1}";
                     }
+                    return result;
                 case 3:
                     if (userInput1 < userInput3 & userInput2 < userInput3)
                     {
                         if (userInput2 > userInput1)
                         {
-                            string result = $"Result: { userInput1}, {userInput2}, {userInput3}";
-                            return result;
+                            result = $"Result: { userInput1}, {userInput2}, {userInput3}";
                         }
                         else
                         {
-                            string result = $"Result: { userInput2}, {userInput1}, {userInput3}";
-                            return result;
+                            result = $"Result: { userInput2}, {userInput1}, {userInput3}";
                         }
                     }
                     if (userInput3 < userInput1 & userInput2 < userInput1)
                     {
                         if (userInput3 < userInput2)
                         {
-                            string result = $"Result: { userInput3}, {userInput2}, {userInput1}";
-                            return result;
+                            result = $"Result: { userInput3}, {userInput2}, {userInput1}";
                         }
                         else
                         {
-                            string result = $"Result: { userInput2}, {userInput3}, {userInput1}";
-                            return result;
+                            result = $"Result: { userInput2}, {userInput3}, {userInput1}";
                         }
                     }
                     if (userInput3 < userInput2 & userInput1 < userInput2)
                     {
                         if (userInput1 > userInput3)
                         {
-                            string result = $"Result: { userInput3}, {userInput1}, {userInput2}";
-                            return result;
+                            result = $"Result: { userInput3}, {userInput1}, {userInput2}";
                         }
                         else
                         {
-                            string result = $"Result: { userInput1}, {userInput3}, {userInput2}";
-                            return result;
+                            result = $"Result: { userInput1}, {userInput3}, {userInput2}";
                         }
                     }
                     else
                     {
-                        string result ="Error! You've entered wrong value";
-                        return result;
+                        result ="Error! You've entered wrong value";
                     }
+                    return result;
 
                 default:
                     string errorResult = "Error! You've entered wrong value";
@@ -180,36 +170,32 @@ namespace ElementaryTasks
 
         public string StudentEvaluation(int userInput1)
         {
+            string score;
             if (userInput1 >= 0 && userInput1 <= 19)
             {
-                string score = "F";
-                return score;
+                score = "F";
             }
             if (userInput1 >= 20 && userInput1 <= 39)
             {
-                string score = "E";
-                return score;
+                score = "E";
             }
             if (userInput1 >= 40 && userInput1 <= 59)
             {
-                string score = "D";
-                return score;
+                score = "D";
             }
             if (userInput1 >= 60 && userInput1 <= 74)
             {
-                string score = "C";
-                return score;
+                score = "C";
             }
             if (userInput1 >= 75 && userInput1 <= 89)
             {
-                string score = "B";
-                return score;
+                score = "B";
             }
             else
             {
-                string score = "A";
-                return score;
+                score = "A";
             }
+            return score;
         }  
     }
 }

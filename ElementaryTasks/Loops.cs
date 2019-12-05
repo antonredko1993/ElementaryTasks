@@ -6,21 +6,22 @@ namespace ElementaryTasks
 {
     class Loops
     {
-        //public void SumOfEvenValues(out int a,  int sum, out int count)
-        //{
-        //    for (int i = 1; i < 99; i++)
-        //    {
-        //        if (i % 2 == 0)
-        //        {
-        //            sum += i;
-        //            count++;
-        //            int a = i;
-        //            Console.WriteLine($"Value: {i}");
-        //        }
-        //    }
-        //    Console.WriteLine($"Summ: {sum}");
-        //    Console.WriteLine($"Count: {count}");
-        //}
+        public SumOfEvenValuesResult SumOfEvenValues()
+        {
+            var result = new SumOfEvenValuesResult();
+            var temp = new List<int>();
+            for (int i = 1; i < 99; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result.SumOfEvenValues += i;
+                    result.CountOfEvenValues++;
+                    temp.Add(i);
+                }
+            }
+            result.EvenValues = temp.ToArray();
+            return result;
+        }
 
         public bool PrimeNumber(int userInput1)
         {
@@ -41,212 +42,195 @@ namespace ElementaryTasks
             }
         }
 
-        public void Square()
+        public char[,] Square(int userInput)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
             if (userInput <= 1 || userInput % 1 != 0)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                return new char[0,0];
             }
             else
             {
+                char[,] square = new char[userInput,userInput];
                 for (int row = 1; row <= userInput; row++)
                 {
                     for (int column = 1; column <= userInput; column++)
                     {
                         if (row == 1 || row == userInput)
                         {
-                            Console.Write("*");
+                            square[row-1,column-1] ='*';
                         }
+
                         else
                         {
                             if (column == 1 || column == userInput)
                             {
-                                Console.Write("*");
+                                square[row-1, column-1] = '*';
                             }
                             else
                             {
-                                Console.Write(" ");
+                                square[row-1, column-1] = ' ';
                             }
                         }
                     }
-
-                    Console.WriteLine();
                 }
+                return square;
             }
         }
 
-        public void Chess()
+        /// <summary>
+        /// Use this method to show chess board with set parameters(Height/Width)
+        /// </summary>
+        /// <param name="userInput1"></param>
+        /// <param name="userInput2"></param>
+        /// <returns>Chess</returns>
+        public char[,] Chess(int userInput1, int userInput2)
         {
-            Console.WriteLine("Enter number of rows");
-            int.TryParse(Console.ReadLine(), out int userInput1);
-
-            if (userInput1 <= 1 || userInput1 % 1 != 0)
-            {
-                Console.WriteLine($"{userInput1} isn't correct value");
-            }
-            else
-            {
-                Console.WriteLine("Enter number of columns");
-            }
-
-            int.TryParse(Console.ReadLine(), out int userInput2);
-
+            char[,] Chess = new char[userInput1, userInput2];
             if (userInput2 <= 1 || userInput2 % 1 != 0)
             {
-                Console.WriteLine($"{userInput2} isn't correct value");
+                return new char[0, 0];
             }
             else
             {
                 for (int row = 1; row <= userInput1; row++)
                 {
+                    int startIndex = 1;
                     if (row % 2 != 0)
                     {
-                        Console.Write(" ");
+                        Chess[row - 1, 0] = ' ' ;
+                        startIndex = 2;
                     }
 
-                    for (int column = 1; column <= userInput2; column++)
+                    for (int column = startIndex; column <= userInput2; column++)
                     {
                         if (column % 2 != 0)
                         {
-                            Console.Write("*");
+                            Chess[row-1, column-1] = '*';
                         }
                         else
                         {
-                            Console.Write(" ");
+                            Chess[row-1, column - 1] = ' ';
                         }
                     }
-                    Console.WriteLine();
                 }
+                return Chess;
             }
         }
 
-        public void PrintPrimeNumbers()                                  
+        public int[] GetPrimeNumbers(int number)                                  
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput <= 1)
+            var temp = new List<int>();
+            if (number <= 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                return new int[0]; 
             }
             else
             {
-                for (int i = 2; i <= userInput; i++)
+                for (int i = 2; i <= number; i++)
                 {
                     if (IsPrimeNumber(i))
                     {
-                        Console.WriteLine($"{i}");
+                        temp.Add(i);
                     }
                 }
-
             }
+            return temp.ToArray();
         }
 
-        public void NaturalNumber()
+        public string[] NaturalNumber(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput < 1)
+            var square = new List<string>();
+            if (number < 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                return new string[0];
             }
             else
             {
-                for (int i = 1; i < userInput; i++)
+                for (int i = 1; i < number; i++)
                 {
-                    if (i * i > userInput)
+                    if (i * i > number)
                     {
-                        Console.Write($"Square of number {i}({i * i}) > {userInput}");
+                        square.Add($"Square of number {i}({i * i}) > {number}");
                     }
-                    else if (i * i < userInput)
+                    else if (i * i < number)
                     {
-                        Console.Write($"Square of number {i}({i * i}) < {userInput}");
+                        square.Add($"Square of number {i}({i * i}) < {number}");
                     }
                     else
                     {
-                        Console.Write($"Square of number {i}({i * i}) = {userInput}");
+                        square.Add($"Square of number {i}({i * i}) = {number}");
                     }
-                    Console.WriteLine();
                 }
             }
+            return square.ToArray();
         }
 
-        public void Divisors()
+        public int[] FindDivisorsOfValue(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-            for (int a = 1; a <= userInput; a++)
+            var divisors = new List<int>();
+            for (int a = 1; a <= number; a++)
             {
-                if (userInput % a == 0)
+                if (number % a == 0)
                 {
-                    Console.WriteLine(a);
+                    divisors.Add(a);
                 }
             }
+            return divisors.ToArray();
         }
 
-        public void RootOfNaturalNumber()
+        public int RootOfNaturalNumber(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput < 1)
+            int result = 0;
+            if (number < 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                result = 0;
             }
             else
             {
-                Console.WriteLine(Math.Sqrt(userInput));
+                result = (int)(Math.Sqrt(number));
             }
+            return result;
         }
 
-        public void Factorial()
+        public int FindFactorial(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput < 1)
+            int f = 1;
+            if (number < 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                f = 0;
             }
             else
             {
-                int F = 1;
-                for (int i = userInput; i > 1; i--)
+                for (int i = number; i > 1; i--)
                 {
-                    F = F * i;
+                    f = f * i;
                 }
-                Console.WriteLine($"Factorial: {F}");
             }
+            return f;
         }
 
-        public void AverageValue()
+        public double FindAverageValue(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput < 1)
+            double result;
+            if (number < 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                result = 0;
             }
             else
             {
                 int sum = 0;
-                int number = 0;
-                for (int i = 1; i <= userInput; i++)
+                int amount = 0;
+                for (int i = 1; i <= number; i++)
                 {
                     if (i == 1 || !IsPrimeNumber(i))
                     {
                         sum += i;
-                        number++;
+                        amount++;
                     }
                 }
-                double result = (double)sum / number;
-                Console.WriteLine(result);
+                result = (double)sum / amount;
             }
+            return result;
         }
         static bool IsPrimeNumber(int num)                    
         {
@@ -260,47 +244,44 @@ namespace ElementaryTasks
             return true;
         }
 
-        public void CalculateSum()
+        public int CalculateSumOfNumbersOfValue(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput < 1)
+            int result;
+            if (number < 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                result = 0;
             }
             else
             {
                 int sum = 0;
-                while (userInput > 0)
+                while (number > 0)
                 {
-                    sum += userInput % 10;
-                    userInput /= 10;
+                    sum += number % 10;
+                    number /= 10;
                 }
-                Console.WriteLine(sum);
+                result = sum;
             }
+            return result;
         }
 
-        public void MirrorNumber()
+        public int GetMirrorNumber(int number)
         {
-            Console.WriteLine("Enter the value");
-            int.TryParse(Console.ReadLine(), out int userInput);
-
-            if (userInput < 1)
+            int result;
+            if (number < 1)
             {
-                Console.WriteLine($"{userInput} isn't correct value");
+                result = 0;
             }
             else
             {
-                int result = 0;
-                while (userInput > 0)
+                result = 0;
+                while (number > 0)
                 {
                     result *= 10;
-                    result += userInput % 10;
-                    userInput /= 10;
+                    result += number % 10;
+                    number /= 10;
                 }
-                Console.WriteLine(result);
             }
+            return result;
         }
     }   
 
