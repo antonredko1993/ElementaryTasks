@@ -31,7 +31,7 @@ namespace ElementaryTasks
             //Console.WriteLine("Enter the second value");
             //int.TryParse(Console.ReadLine(), out int userInput2);
 
-            //int result = logicalOperations.CalculateResult(userInput1, userInput2);
+            //int result = logicalOperations.GetResultOfOperationBetween2Numbers(userInput1, userInput2);
             //Console.WriteLine($"Result: {result}");
 
             // 3.Определить какой четверти принадлежит точка с координатами (х,у))
@@ -132,56 +132,56 @@ namespace ElementaryTasks
             //}
 
             // 7. Отсортировать значения двух, трех, четырех переменных используя только условные операторы
-            Console.WriteLine("Chose how many values you want to sort");
-            if (!int.TryParse(Console.ReadLine(), out int choseInput))
-            {
-                Console.WriteLine("Error! You should enter numeric value from 2 to 3");
-                return;
-            }
-            int userInput1 = 0;
-            int userInput2 = 0;
-            int userInput3 = 0;
-            if (choseInput == 2)
-            {
-                Console.WriteLine("Enter the first value");
-                if (!int.TryParse(Console.ReadLine(), out userInput1))
-                {
-                    Console.WriteLine("Error! You should enter numeric value");
-                    return;
-                }
+            //Console.WriteLine("Chose how many values you want to sort");
+            //if (!int.TryParse(Console.ReadLine(), out int choseInput))
+            //{
+            //    Console.WriteLine("Error! You should enter numeric value from 2 to 3");
+            //    return;
+            //}
+            //int userInput1 = 0;
+            //int userInput2 = 0;
+            //int userInput3 = 0;
+            //if (choseInput == 2)
+            //{
+            //    Console.WriteLine("Enter the first value");
+            //    if (!int.TryParse(Console.ReadLine(), out userInput1))
+            //    {
+            //        Console.WriteLine("Error! You should enter numeric value");
+            //        return;
+            //    }
 
-                Console.WriteLine("Enter the second value");
-                if (!int.TryParse(Console.ReadLine(), out userInput2))
-                {
-                    Console.WriteLine("Error! You should enter numeric value");
-                    return;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Enter the first value");
-                if (!int.TryParse(Console.ReadLine(), out userInput1))
-                {
-                    Console.WriteLine("Error! You should enter numeric value");
-                    return;
-                }
+            //    Console.WriteLine("Enter the second value");
+            //    if (!int.TryParse(Console.ReadLine(), out userInput2))
+            //    {
+            //        Console.WriteLine("Error! You should enter numeric value");
+            //        return;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Enter the first value");
+            //    if (!int.TryParse(Console.ReadLine(), out userInput1))
+            //    {
+            //        Console.WriteLine("Error! You should enter numeric value");
+            //        return;
+            //    }
 
-                Console.WriteLine("Enter the second value");
-                if (!int.TryParse(Console.ReadLine(), out userInput2))
-                {
-                    Console.WriteLine("Error! You should enter numeric value");
-                    return;
+            //    Console.WriteLine("Enter the second value");
+            //    if (!int.TryParse(Console.ReadLine(), out userInput2))
+            //    {
+            //        Console.WriteLine("Error! You should enter numeric value");
+            //        return;
 
-                }
-                Console.WriteLine("Enter the trird value");
-                if (!int.TryParse(Console.ReadLine(), out userInput3))
-                {
-                    Console.WriteLine("Error! You should enter numeric value");
-                    return;
-                }
-            }
-            string result = logicalOperations.AscendingSort(userInput1, userInput2, userInput3, choseInput);
-            Console.WriteLine(result);
+            //    }
+            //    Console.WriteLine("Enter the trird value");
+            //    if (!int.TryParse(Console.ReadLine(), out userInput3))
+            //    {
+            //        Console.WriteLine("Error! You should enter numeric value");
+            //        return;
+            //    }
+            //}
+            //string result = logicalOperations.AscendingSort(userInput1, userInput2, userInput3, choseInput);
+            //Console.WriteLine(result);
 
             //8.рейтинг	Оценка
             /*  0 - 19    F
@@ -204,10 +204,13 @@ namespace ElementaryTasks
             Loops loops = new Loops();
             //1)	 найти сумму четных чисел и их количество в диапазоне от 1 до 99
 
-            //loops.SumOfEvenValues(out int a, out int sum, out int count);
-            //Console.WriteLine(a);
-            //Console.WriteLine($"Summ: {sum}");
-            //Console.WriteLine($"Count: {count}");
+            //var result = loops.SumOfEvenValues();
+            //for (int i = 0; i < result.EvenValues.Length; i++)
+            //{
+            //    Console.WriteLine(result.EvenValues[i]);
+            //}
+            //Console.WriteLine($"Summ: {result.SumOfEvenValues}");
+            //Console.WriteLine($"Count: {result.CountOfEvenValues}");
 
             //2)   	Проверить простое ли число? (число называется простым, если оно делится только само на себя и на 1)
 
@@ -229,69 +232,182 @@ namespace ElementaryTasks
             *   *
             *****
             */
-            //loops.Square();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+
+            //var result = loops.Square(userInput);
+            //for (int row = 0; row < userInput; row++)
+            //{
+            //    for (int column = 0; column < userInput; column++)
+            //    {
+            //        Console.Write(result[row,column]);
+            //    }
+            //    Console.WriteLine();
+            //}
 
             /*4)	Вывести шахматную доску с заданными размерами, по принципу:
-            *  *  *  *  *  *
-              *  *  *  *  *  *  
-            *  *  *  *  *  *
-              *  *  *  *  *  *
-            */
-            //loops.Chess();
+                    *  *  *  *  *  *
+                      *  *  *  *  *  *  
+                    *  *  *  *  *  *
+                      *  *  *  *  *  *
+                    */
+            //Console.WriteLine("Enter number of rows");
+            //int.TryParse(Console.ReadLine(), out int userInput1);
 
-            // 5) 	Напишите программу, которая определяет, является ли введенное число палиндромом?     
-            //(Палиндром – число или текст, которые одинаково читаются слева направо и справа налево)            - НЕ РАБОТАЕТ
-            //loops.PrintPrimeNumbers();
+            //if (userInput1 <= 1 || userInput1 % 1 != 0)
+            //{
+            //    Console.WriteLine($"{userInput1} isn't correct value");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Enter number of columns");
+            //}
+            //int.TryParse(Console.ReadLine(), out int userInput2);
+
+            //var result = loops.Chess(userInput1,userInput2);
+            //for (int row = 0; row < userInput1; row++)
+            //{
+            //    for (int column = 0; column < userInput2; column++)
+            //    {
+            //        Console.Write(result[row,column]);
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+            // 5) Вывести все простые числа в диапазоне от 2 до n
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+
+            //var result = loops.GetPrimeNumbers(userInput);
+            //for (int i = 0; i <result.Length ; i++)
+            //{
+            //    Console.WriteLine(result[i]);
+            //}
 
             //6) 	Вывести все натуральные числа,  квадрат которых больше/меньше заданного числа n
-            //loops.NaturalNumber();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+
+            //var result = loops.NaturalNumber(userInput);
+            //foreach (var i in result )
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //7)  	Вывести все делители числа
-            //loops.Divisors();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+            //var result = loops.FindDivisorsOfValue(userInput);
+            //foreach (var i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //8) 	Найти корень натурального числа с точностью до целого
-            //loops.RootOfNaturalNumber();
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+
+            //var result = loops.RootOfNaturalNumber(userInput);
+            //Console.WriteLine($"Root of {userInput}: {result}");
 
             //9)    Вычислить факториал числа n. n! = 1*2*…*n-1*n;
-            //loops.Factorial();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+            //var result = loops.FindFactorial(userInput);
+            //Console.WriteLine($"Factoiral of {userInput}: {result}");
 
             //10)   Вычислить среднее значение чисел, не являющихся простыми, в диапазоне от 1 до n.
-            //loops.AverageValue();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+            //var result = loops.FindAverageValue(userInput);
+            //Console.WriteLine($"Average value is: {result}");
 
             //11) 	Посчитать сумму цифр заданного числа
-            //loops.CalculateSum();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+            //var result = loops.CalculateSumOfNumbersOfValue(userInput);
+            //Console.WriteLine($"Sum of number {userInput} is: {result}");
 
             //12) 	Вывести число, которое является зеркальным отображением последовательности цифр заданного числа
             //      например, задано число 123, вывести 321.    
-            //loops.MirrorNumber();
+
+            //Console.WriteLine("Enter the value");
+            //int.TryParse(Console.ReadLine(), out int userInput);
+            //var result = loops.GetMirrorNumber(userInput);
+            //Console.WriteLine($"Mirror number of {userInput} is: {result}");
 
             Arrays arrays = new Arrays();
             //1)	Найти минимальный элемент массива
-            //arrays.MinElement();
+            //int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
+            //var result = arrays.FindMinElementOfArray(numbers);
+            //Console.WriteLine($"Min element of array is: {result}");
 
             //2)	Найти индекс максимального элемента массива
-            //arrays.IndexOfMaxValue();
+            //int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
+            //var result = arrays.IndexOfMaxValue(numbers);
+            //Console.WriteLine($"Index of max value in array is: {result}");
 
             //3)	Посчитать сумму элементов массива с нечетными индексами
-            //arrays.SumOfElements();
+            //int[] numbers = { 11, 10, 12, 13, 14, 4, 16, 21, 15, 17 };
+            //var result = arrays.CalculateSumOfNonEvenElements(numbers);
+            //Console.WriteLine($"Sum of non even elements is: {result}");
 
             //4)	Найти наиболее часто встречающееся значение
-            //arrays.MostCommonValue();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.FindMostCommonValue(numbers);
+            //Console.WriteLine($"The most common value in array is {result}");
 
             //5)	Сделать реверс массива (массив в обратном направлении)
-            //arrays.ArrayReverse();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.ArrayReverse(numbers);
+            //foreach (int reverseIndex in result)
+            //{
+            //    Console.Write($"{reverseIndex} ");
+            //}
 
             //6) 	Найти все элементы, которые меньше среднего значения
-            //arrays.LessThenAverageValue();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.LessThenAverageValue(numbers);
+            //Console.WriteLine("Values which less then average value of array:");
+            //foreach (var i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //7)	Найти все элементы массива, для которых делителем является хотя бы один из элементов массива.
-            //arrays.Divide();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.FindElementsWhichHasDivideInArray(numbers);
+            //Console.WriteLine("Elements which has at least 1 divide in array:");
+            //foreach (int i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //8)	Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
-            //arrays.SwapPartsOfArray();
+            //int[] numbers = { 11, 10, 12, 13, 14, 13, 16, 13, 15, 4 };
+            //var result = arrays.SwapPartsOfArray(numbers);
+            //Console.WriteLine("Swapped array looks like:");
+            //foreach (int i in result)
+            //{
+            //    Console.Write($"{i} ");
+            //}
 
             //9)	Заполнить массив  из 100 элементов числами от 0 до 100
-            //arrays.ArrayFilling();
+            //int[] array = new int[101];
+            //var result = arrays.ArrayFilling(array);
+            //Console.WriteLine("Filled array looks like:");
+            //foreach (int i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             //User user1 = new User();
             //user1.FirstName = "Anton";
