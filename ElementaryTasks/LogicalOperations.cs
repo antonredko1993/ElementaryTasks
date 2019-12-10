@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ElementaryTasks
 {
-    class LogicalOperations
+    public class LogicalOperations
     {
         public int FindMaxValue(int userInput1, int userInput2, int userInput3)                    
         {
@@ -134,7 +134,7 @@ namespace ElementaryTasks
                             result = $"Result: { userInput2}, {userInput1}, {userInput3}";
                         }
                     }
-                    if (userInput3 < userInput1 & userInput2 < userInput1)
+                    else if (userInput3 < userInput1 & userInput2 < userInput1)
                     {
                         if (userInput3 < userInput2)
                         {
@@ -145,7 +145,7 @@ namespace ElementaryTasks
                             result = $"Result: { userInput2}, {userInput3}, {userInput1}";
                         }
                     }
-                    if (userInput3 < userInput2 & userInput1 < userInput2)
+                    else if (userInput3 < userInput2 & userInput1 < userInput2)
                     {
                         if (userInput1 > userInput3)
                         {
@@ -175,19 +175,19 @@ namespace ElementaryTasks
             {
                 score = "F";
             }
-            if (userInput1 >= 20 && userInput1 <= 39)
+            else if (userInput1 >= 20 && userInput1 <= 39)
             {
                 score = "E";
             }
-            if (userInput1 >= 40 && userInput1 <= 59)
+            else if (userInput1 >= 40 && userInput1 <= 59)
             {
                 score = "D";
             }
-            if (userInput1 >= 60 && userInput1 <= 74)
+            else if (userInput1 >= 60 && userInput1 <= 74)
             {
                 score = "C";
             }
-            if (userInput1 >= 75 && userInput1 <= 89)
+            else if (userInput1 >= 75 && userInput1 <= 89)
             {
                 score = "B";
             }
